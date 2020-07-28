@@ -1,1 +1,1 @@
-print("This is the DevNet")
+print("This is the new DevNet")
