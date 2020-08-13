@@ -2,10 +2,10 @@ import requests
 import json
 
 router = {
-    "host": "ios-xe-mgmt.cisco.com",
-    "port": "9443",
-    "user": "root",
-    "password": "D_Vay!_10&"
+    "host": "192.168.1.41",
+    "port": "443",
+    "username": "alberto",
+    "password": "luna"
 }
 
 url = f"https://{router['host']}:{router['port']}/restconf/data/netconf-state/capabilities"
@@ -16,7 +16,7 @@ headers = {
 }
 
 response = requests.get(url=url, headers=headers, auth=(
-    router['user'], router['password']), verify=False)
+    router['username'], router['password']), verify=False)
 
 if response.status_code == 200:
     response_dict = response.json()
